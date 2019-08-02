@@ -8,10 +8,12 @@ module.exports = {
         appleMobileWebAppStatusBarStyle: 'black',
     
         // 配置 workbox 插件
-        workboxPluginMode: 'InjectManifest',
+        // workboxPluginMode: 'InjectManifest',
         workboxOptions: {
+          skipWaiting: true,
+          clientsClaim: true,
           // InjectManifest 模式下 swSrc 是必填的。
-          swSrc: 'dev/sw.js',
+          // swSrc: 'dev/sw.js',
           // ...其它 Workbox 选项...
         }
     }
